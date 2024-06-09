@@ -1,0 +1,252 @@
+:root {
+    --primeira-cor: #fff;
+    --segunda-cor: #ed0061;
+    --terceira-cor: #1e1e1e;
+}
+
+body {
+    background-color: var(--segunda-cor);
+    color: var(--primeira-cor);
+    font-family: 'Ubuntu',Helvetica,Arial,Lucida,sans-serif !important;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+#box-calculadora-roas {
+    width: 80%;
+    max-width: 880px;
+    display: grid;
+    align-content: center;
+    gap: 2vh;
+    position: relative;
+
+}
+
+#box-texto-calculadora {
+
+    height: fit-content;
+}
+
+#box-input-calculadora {
+
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    height: fit-content;
+
+}
+
+#box-resultado-calculadora {
+
+    height: fit-content;
+
+}
+
+#descricao-calculadora {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.4em;
+}
+
+#box-campos{
+
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+
+}
+
+.botao-calcular{
+
+    width: 100%;
+    height: 40px;
+    border-radius: 0.25rem;
+
+    border: 0;
+    box-sizing: border-box;
+    color: var(--primeira-cor);
+    background-color: var(--terceira-cor);
+    font-size: min(5vw, 24px);
+    transition-duration: 0.25s;
+    cursor: pointer;
+
+}
+
+.botao-calcular:hover{
+
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    background: white;
+    color: var(--terceira-cor);
+
+}
+
+.botao-calcular:active{
+
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    background-color: var(--terceira-cor);
+    color: white
+
+}
+
+
+
+
+
+.input-calculadora::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.box-campo-input-calculadora {
+
+    width: 100%;
+    border-radius: 0.25rem;
+    border-color: var(--primeira-cor);
+
+    border-style: solid;
+    border-width: 1px;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    transition-duration: 0.25s;
+    box-sizing: border-box;
+}
+
+
+.box-campo-input-calculadora:hover {
+    transition-duration: 0.15s;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+}
+
+.titulo-campo {
+    font-size: 1.4em;
+    font-weight: 700;
+    margin-bottom: 1vh;
+}
+
+.descricao-campo {
+    line-height: 1.4em;
+}
+
+.input-calculadora {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    appearance: none;
+    resize: none;
+    transition-property: all;
+    transition-duration: 150ms;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: 24px;
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--primeira-cor);
+    border-radius: 0.25rem;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--primeira-cor);
+}
+
+.titulo-resultado {
+    font-size: 1.2em;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.resultado {
+    font-size: 3em;
+    font-weight: 700;
+}
+
+#alert-box{
+
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    top: -120px;
+    box-sizing: border-box;
+    gap: 5vw;
+    margin-top: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2% 5%;
+    border-radius: 0.25rem;
+
+}
+
+#alert-box.open {
+
+    animation-name: alertOpenAnimation;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+#alert-box.close {
+
+    animation-name: alertCloseAnimation;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes alertCloseAnimation {
+
+    0% {
+        opacity: 1;
+        top: 0;
+    }
+
+    100% {
+        top: -120px;
+        opacity: 0;
+    }
+
+}
+
+@keyframes alertOpenAnimation {
+
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        top: 0;
+        opacity: 1;
+    }
+
+}
+
+.alert-icon, .alert-close-icon {
+
+    width: min(12vw, 40px);
+    height: min(12vw, 40px);
+    fill: #fff;
+    display: flex;
+    align-items: center;
+
+}
+
+.alert-close-icon {
+
+    cursor: pointer;
+
+}
+
+.alert-text {
+
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: min(20px, 3vw);
+
+}
