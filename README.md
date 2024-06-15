@@ -13,6 +13,7 @@
   - [Sumário](#sumário)
   - [Introdução](#introdução)
   - [Tecnologias Usadas](#tecnologias-usadas)
+  - [Como Executar o Projeto](#como-executar-o-projeto)
   - [Licença](#licença)
 
 
@@ -33,8 +34,8 @@ Este projeto foi financiado pela Agência Wert, uma empresa que oferece soluçõ
 <!-- ## Estrutura do Projeto
 Para entender a estrutura do projeto, consulte [Estrutura do Projeto](link_para_o_documentacao_estrutura.md). -->
 
-<!-- ## Como Executar o Projeto
-Para obter instruções sobre como executar o projeto, consulte [Como Executar o Projeto](link_para_o_documentacao_execucao.md). -->
+## Como Executar o Projeto
+Para obter instruções sobre como executar o projeto, veja o video: [Como clonar e executar o projeto Calculadora ROAS: Passo a Passo](https://www.youtube.com/watch?v=vhyWVMQwlbk).
 
 <!-- ## Como Contribuir
 Se você quiser contribuir para o projeto, por favor, siga as orientações em [Como Contribuir](link_para_o_documentacao_contribuicao.md). -->
