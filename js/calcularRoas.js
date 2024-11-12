@@ -3,7 +3,11 @@ import fecharAlert  from './fecharAlert.js';
 
 function calcularRoas() {
 
-  let faturamentoValor = document
+  let faturamentoValor;
+
+  isUndefined(faturamentoValor);
+
+  faturamentoValor = document
     .querySelector("#faturamento")
     .value.replace(",", ".");
 
@@ -51,6 +55,14 @@ function validarValor(valor, msg) {
 
     throw new Error(msg);
 
+  }
+
+}
+
+function isUndefined($value){
+
+  if(typeof $value === 'undefined'){
+    console.warn("undefined variable!");
   }
 
 }
